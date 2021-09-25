@@ -1,0 +1,52 @@
+@use "../util" as *;
+
+.percent {
+  margin-top: rem(24);
+
+  .pgb {
+    border: none;
+    padding: rem(4) rem(17);
+    cursor: pointer;
+    border-radius: rem(5);
+    font-size: rem(16);
+    font-family: var(--font-body);
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--very-dark-cyan);
+  }
+
+  &__grid {
+    margin-top: rem(10);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(15);
+
+    &--inpu {
+      min-width: rem(50);
+    }
+  }
+
+  &__number {
+    margin-top: rem(24);
+  }
+
+  &__label {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url(/images/icon-person.svg);
+      background-repeat: no-repeat;
+      top: rem(3);
+      left: rem(17);
+      width: rem(15);
+      height: rem(15);
+    }
+
+    input {
+      margin-top: rem(10);
+      width: 100%;
+    }
+  }
+}

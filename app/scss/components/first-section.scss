@@ -1,0 +1,46 @@
+@use "../util" as *;
+
+.first-section {
+  h5 {
+    font-size: rem(12);
+    color: var(--dark-grayish-cyan);
+  }
+
+  &__label {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url(/images/icon-dollar.svg);
+      background-repeat: no-repeat;
+      top: rem(3);
+      left: rem(17);
+      width: rem(20);
+      height: rem(20);
+    }
+  }
+
+  .inpu {
+    background-color: var(--light-grayish-cyan-two);
+    border: none;
+    border-radius: rem(5);
+    padding: rem(4) rem(17);
+    text-align: right;
+    border: var(--white) solid rem(2);
+    font-size: rem(16);
+    letter-spacing: rem(1);
+    font-weight: 700;
+    color: var(--very-dark-cyan);
+
+    &:focus {
+      outline: none;
+      border: var(--strong-cyan) solid rem(2);
+    }
+  }
+
+  .bill {
+    width: 100%;
+    margin-top: rem(10);
+  }
+}
