@@ -1,6 +1,12 @@
 @use "../util" as *;
 
 .ss {
+  @include breakpoint(large) {
+    flex: 1;
+    margin-left: rem(23);
+    position: relative;
+  }
+
   background-color: var(--very-dark-cyan);
   border-radius: rem(10);
   padding: rem(25) rem(20) rem(20);
@@ -43,5 +49,26 @@
     padding: rem(10);
     margin-top: rem(20);
     background-color: var(--strong-cyan);
+    cursor: pointer;
+    transition: 0.25s ease all;
+
+    &:hover {
+      background-color: var(--light-grayish-cyan);
+    }
+
+    &:disabled {
+      background-color: var(--very-dark-cyan-two);
+      cursor: unset;
+
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+
+    @include breakpoint(large) {
+      width: 86%;
+      position: absolute;
+      bottom: rem(23);
+    }
   }
 }

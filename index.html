@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <!-- Google font end -->
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" />
     <link rel="stylesheet" href="/dist/style.css" />
     <script defer src="/dist/script.js"></script>
   </head>
@@ -29,21 +30,43 @@
         <div class="percent">
           <h5>Selece Tip %</h5>
           <div class="percent__grid">
-            <button class="percent__grid--5 pgb">5%</button>
-            <button class="percent__grid--10 pgb">10%</button>
-            <button class="percent__grid--15 pgb">15%</button>
-            <button class="percent__grid--25 pgb">25%</button>
-            <button class="percent__grid--50 pgb">50%</button>
+            <button class="percent__grid--5 pgb pg" disabled data-per="5">
+              5%
+            </button>
+            <button class="percent__grid--10 pgb pg" disabled data-per="10">
+              10%
+            </button>
+            <button class="percent__grid--15 pgb pg" disabled data-per="15">
+              15%
+            </button>
+            <button class="percent__grid--25 pgb pg" disabled data-per="25">
+              25%
+            </button>
+            <button class="percent__grid--50 pgb pg" disabled data-per="50">
+              50%
+            </button>
             <input
               type="number"
               name="custom"
-              class="percent__grid--inpu inpu"
+              class="percent__grid--inpu inpu pg"
               placeholder="Custom"
+              min="1"
+              max="100"
+              disabled
             />
           </div>
-          <h5 class="percent__number">Number of People</h5>
+          <div class="percent__nop">
+            <h5>Number of People</h5>
+            <h5 id="percent__zero">Can't be zero</h5>
+          </div>
           <label class="percent__label">
-            <input type="number" name="custom" class="inpu" placeholder="0" />
+            <input
+              type="number"
+              name="custom"
+              class="inpu percent__label--inpu"
+              placeholder="0"
+              disabled
+            />
           </label>
         </div>
       </div>
@@ -54,18 +77,18 @@
             <h5>Tip Amount</h5>
             <p>/ person</p>
           </div>
-          <div class="ss__num">$0.00</div>
+          <div class="ss__num tip_amount">$0.00</div>
         </div>
 
         <div class="ss__f">
           <div>
-            <h5>Tip Amount</h5>
+            <h5>Total</h5>
             <p>/ person</p>
           </div>
-          <div class="ss__num">$0.00</div>
+          <div class="ss__num tip_a_person">$0.00</div>
         </div>
 
-        <button class="ss__reset">reset</button>
+        <button class="ss__reset" disabled>reset</button>
       </div>
     </section>
   </body>
