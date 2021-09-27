@@ -1,6 +1,11 @@
 @use "../util" as *;
 
 .first-section {
+  @include breakpoint(large) {
+    flex: 1;
+    margin-right: rem(23);
+  }
+
   h5 {
     font-size: rem(12);
     color: var(--dark-grayish-cyan);
