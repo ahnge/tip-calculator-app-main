@@ -24,7 +24,13 @@
       <div class="first-section">
         <h5>Bill</h5>
         <label class="first-section__label">
-          <input type="number" name="bill" class="bill inpu" placeholder="0" />
+          <input
+            type="number"
+            name="bill"
+            class="bill inpu"
+            placeholder="0"
+            pattern="\d*"
+          />
         </label>
 
         <div class="percent">
@@ -53,6 +59,7 @@
               min="1"
               max="100"
               disabled
+              pattern="\d*"
             />
           </div>
           <div class="percent__nop">
